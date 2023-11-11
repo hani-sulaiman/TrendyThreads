@@ -187,7 +187,7 @@ header {
     align-items: center;
     background-color: var(--primary-color);
     padding: 20px 0px;
-    margin-top: 97px;
+    margin-top: 38px;
 }
 
 header .categories .list-category {
@@ -1083,7 +1083,7 @@ footer .links .column a:nth-child(1) {
 
 @media only screen and ((min-width:800px) and (max-width:1000px)) {
     header {
-        margin-top: 129px;
+        margin-top: 59px;
     }
 
     main .slider {
@@ -1206,10 +1206,9 @@ footer .links .column a:nth-child(1) {
 }
 
 @media only screen and ((min-width:750px) and (max-width:799px)) {
-    header {
-        margin-top: 130px;
+    header{
+        margin-top: 69px;
     }
-
     main .slider {
         height: 265px;
     }
@@ -1323,7 +1322,7 @@ footer .links .column a:nth-child(1) {
 
 @media only screen and ((min-width:600px) and (max-width:749px)) {
     header {
-        margin-top: 130px;
+        margin-top: 47px;
     }
 
     main .slider {
