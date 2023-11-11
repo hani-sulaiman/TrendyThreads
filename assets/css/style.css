@@ -1,0 +1,2331 @@
+/*
+Basic Styles
+*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;500;700&family=Rokkitt:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/almonte-snow');
+
+:root {
+    --primary-color: #112D4E;
+    --primary-light-color: #254d7d;
+    --accent-color: #3F72AF;
+    --accent-light-color: #B5DEF7;
+    --second-color: #DBE2EF;
+    --third-color: #F9F7F7;
+    --grey-light: #9a9a9a;
+    --grey-super-light: #d0d0d0c5;
+    --alert-color: #FF2E00;
+    --success-color: #00A95D;
+    --font-family-plexmono: 'IBM Plex Mono', monospace;
+    --font-family-Rokkitt: 'Rokkitt', serif;
+    --font-family-snow: 'Almonte Snow', sans-serif;
+    ;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-family-plexmono);
+}
+
+body {
+    margin: 0 !important;
+    line-height: unset !important
+}
+
+/*Main Page*/
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.164);
+}
+
+.nav-mob {
+    display: none;
+}
+
+.nav-mob .container .line:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 15px 25px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+    box-shadow: 3px 0px 10px #e5e5e5;
+}
+
+.nav-mob .container .line:nth-child(2) {
+    margin-top: 100px;
+}
+
+.nav-mob .container .line img {
+    width: 150px;
+}
+
+.nav-mob .container .line .menu-icon i,
+.nav-mob .container .line .cart-icon i {
+    font-size: 20px;
+    -webkit-text-stroke: 1px;
+    color: var(--primary-color);
+}
+
+
+.nav-mob .line .search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    margin: 5px;
+}
+
+nav .logo img {
+    max-width: 150px;
+}
+
+nav .search {
+    position: relative;
+}
+
+nav .search input[type="search"] {
+    width: 350px;
+    height: 35px;
+    outline: none;
+    border: 2px solid var(--grey-light);
+    border-radius: 5px;
+    text-indent: 5px;
+}
+
+.nav-mob .line .search input[type="search"] {
+    width: 90%;
+    height: 35px;
+    outline: none;
+    border: 2px solid var(--grey-light);
+    border-radius: 5px;
+    text-indent: 5px;
+}
+
+.nav-mob .line .search select {
+    position: absolute;
+    right: 80px;
+    top: 8px;
+    font-size: 13px;
+    background-color: transparent;
+    border: 0;
+}
+
+.nav-mob .search .bi-search {
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+    top: 6px;
+    -webkit-text-stroke: 1px;
+    border-left: 2px solid var(--grey-light);
+    padding-left: 10px;
+}
+
+nav .search select {
+    position: absolute;
+    right: 50px;
+    top: 8px;
+    font-size: 13px;
+    background-color: transparent;
+    border: 0;
+}
+
+nav .search .bi-search {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    top: 6px;
+    -webkit-text-stroke: 1px;
+    border-left: 2px solid var(--grey-light);
+    padding-left: 10px;
+}
+
+nav .links {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+}
+
+nav .links a {
+    color: var(--grey-light);
+    text-decoration: none;
+
+}
+
+nav .links a:hover {
+    color: var(--primary-dark);
+    transition: 0.3s;
+}
+
+nav .links a.selected {
+    color: var(--primary-dark);
+    font-weight: 700 !important;
+}
+
+nav .social-media a {
+    color: var(--primary-dark);
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 20px 0px;
+    margin-top: 97px;
+}
+
+header .categories .list-category {
+    position: relative;
+    cursor: pointer;
+    padding: 10px 20px;
+    z-index: 1;
+}
+
+header .categories .list-category span,
+header .categories .list-category i {
+    color: #fff;
+}
+
+header .categories .list-category i {
+    -webkit-text-stroke: 1px;
+}
+
+header .categories .list-category .list {
+    position: relative;
+    top: 35px;
+    flex-wrap: wrap;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 10px;
+    box-shadow: 2px 2px 6px rgb(54, 54, 54);
+}
+
+header .categories .list-category .list a {
+    color: var(--primary-dark);
+    font-size: 14px;
+    width: 100%;
+    padding: 10px 7px;
+    text-indent: 3px;
+    text-decoration: none;
+    border-radius: 7px;
+
+}
+
+header .categories .list-category .list a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+header .categories .list-category:hover .list {
+    display: flex;
+    position: absolute;
+}
+
+header .categories .list-category .list {
+    display: none;
+}
+
+header .categories .list-category .list a {
+    display: block;
+}
+
+header .currency select,
+header .language select {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+header .signin i,
+header .favorites i,
+header .cart i {
+    -webkit-text-stroke: 1px;
+    color: #fff;
+}
+
+header .favorites a,
+header .signin a,
+header .cart a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    position: relative;
+}
+
+main .slider {
+
+    animation-name: pop-slide;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.5, 1.5, 2, 1);
+    opacity: 0.5;
+    left: 0;
+    right: 0;
+    transform: translateY(50vh);
+    position: absolute;
+    width: 80%;
+    height: 420px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+main .slider .container {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: visible;
+    border-radius: 20px;
+    background-image: linear-gradient(to left top, var(--third-color), var(--accent-color), var(--primary-light-color));
+}
+
+.slider .container::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: #fff;
+}
+
+main .slider img {
+    border-bottom-left-radius: inherit;
+    position: absolute;
+    height: 480px;
+    top: -60px;
+}
+
+main .slider .ad {
+    position: absolute;
+    left: 60%;
+    top: 40px;
+}
+
+main .slider .ad .title {
+    margin: 0;
+    font-size: 60px;
+    font-family: var(--font-family-Rokkitt);
+    font-weight: 600;
+    color: #fff;
+    line-height: 1;
+    max-width: 200px;
+    text-shadow: 1px 1px 6px rgb(61, 61, 61);
+
+}
+
+main .slider .ad .subtitle {
+    font-family: var(--font-family-Rokkitt);
+    font-weight: 300;
+    font-size: 30px;
+    max-width: 280px;
+    color: #e8e8e8;
+    text-shadow: 1px 1px 6px rgb(61, 61, 61);
+}
+
+main .slider .ad .ad-btn,
+main .slider .ad .subtitle,
+main .slider .ad .title,
+main .slider img {
+    animation-name: slide-up;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes slide-up {
+    from {
+
+        opacity: 0.3;
+        transform: translateY(25px);
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+main .slider .ad a {
+    position: relative;
+    top: 50px;
+    padding: 15px 40px;
+    border-radius: 7px;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+}
+
+main .hide {
+    display: none;
+}
+
+@keyframes pop-slide {
+    0% {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        opacity: 0.5;
+        transform: translateY(50vh) rotate(360deg);
+    }
+
+    40% {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(-1vh) rotate(0);
+    }
+
+    70% {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        opacity: 1;
+        transform: translateY(15vh) rotate(0);
+    }
+
+    100% {
+        border-radius: 20px;
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+
+main section {
+    margin-top: 35px !important;
+    margin-bottom: 70px !important;
+}
+
+main section.flash-sales {
+    padding-top: 530px;
+    margin: 0px 100px;
+}
+
+main section .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+main section .bar a {
+    color: var(--grey-light);
+    text-decoration: none;
+}
+
+main section.flash-sales .sales {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main section.flash-sales .sales .sale {
+    width: 300px;
+    padding: 15px 10px;
+    box-shadow: 2px 2px 8px var(--grey-super-light);
+    border-radius: 12px;
+
+}
+
+main section.flash-sales .sales .sale a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+main section.flash-sales .sales .sale .datetime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section.flash-sales .sales .sale .datetime .title {
+    margin: auto;
+    margin-top: 14px;
+    margin-bottom: 17px;
+    color: var(--grey-light)
+}
+
+main section.flash-sales .sales .sale .datetime .time span {
+    position: relative;
+    margin: 0 18px;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+main section.flash-sales .sales .sale .datetime .time span:nth-child(1)::after,
+main section.flash-sales .sales .sale .datetime .time span:nth-child(2)::after {
+    content: ":";
+    position: absolute;
+    left: 30px;
+    color: var(--grey-light);
+    text-indent: 3px;
+}
+
+main section.flash-sales .sales .sale .datetime .id-time span {
+    margin: 0 8px;
+    color: var(--grey-light);
+    font-weight: 300;
+    font-size: 14px;
+}
+
+main section.flash-sales .sales .sale img {
+    max-width: 80%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+main section.flash-sales .sales .sale .details {
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 150px;
+}
+
+main section.flash-sales .sales .sale .details .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+main section.flash-sales .sales .sale .details .content {
+    font-weight: 400;
+    color: var(--grey-light);
+    display: block;
+    width: 230px;
+    font-size: 15px;
+    font-family: var(--font-family-Rokkitt);
+}
+
+main section.flash-sales .sales .sale .details .rating {
+    display: flex;
+}
+
+main section.flash-sales .sales .sale .details .rating i.bi {
+    margin: 0px 2px;
+}
+
+main section.flash-sales .sales .sale .details .rating .bi-star-fill {
+    color: #FFC000;
+}
+
+main section.flash-sales .sales .sale .details .rating span {
+    color: #595959;
+}
+
+main section.flash-sales .sales .sale .details .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section.flash-sales .sales .sale .details .price .current-price {
+    border-radius: 3px;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+main section.flash-sales .sales .sale .details .price .old-price {
+    text-decoration: line-through;
+    font-weight: 400;
+    color: #595959;
+}
+
+main section.flash-sales .sales .sale .details .price .discount {
+    background-color: var(--accent-color);
+    border-radius: 3px;
+    padding: 1px 5px;
+    display: block;
+    color: var(--third-color);
+}
+
+main section.season-sales {
+    display: flex;
+    position: relative;
+}
+
+main section.season-sales img {
+    flex: 30%;
+    max-width: 650px;
+}
+
+main section.season-sales .ad-details {
+    position: relative;
+    background-color: var(--accent-color);
+    flex: 60%;
+}
+
+main section.season-sales .ad-poster {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    left: -150px;
+    top: 110px;
+    border-radius: 20px;
+}
+
+main section.season-sales .ad-poster .container-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 100%;
+    padding: 0;
+    color: black;
+}
+
+main section.season-sales .ad-poster .container .ad-title {
+    margin-top: 45px;
+    font-size: 27px;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-family: var(--font-family-snow);
+}
+
+main section.season-sales .ad-poster .container .offer {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--alert-color);
+    font-weight: 700;
+}
+
+
+main section.season-sales .ad-poster .container .endtime {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 700;
+}
+
+main section.season-sales .ad-poster .container .endtime span {
+    padding: 0 5px;
+}
+
+main section.season-sales .ad-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main section.season-sales .ad-details .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main section.season-sales .ad-details .container .title {
+    font-size: 35px;
+    font-weight: 700;
+    color: #fff;
+}
+
+main section.season-sales .ad-details .container .details {
+    font-size: 23px;
+    word-spacing: -6px;
+    font-weight: 400;
+    color: #fff;
+    margin: 45px;
+}
+
+main section.season-sales .ad-details .container a.ad-btn {
+    background-color: #fff;
+    padding: 17px 65px;
+    text-decoration: none;
+    color: var(--primary-color);
+    border-radius: 5px;
+}
+
+main section.season-sales .ad-details .container a.ad-btn i {
+    font-size: 17px;
+    position: relative;
+    top: 1px;
+}
+
+main section.must-have {
+    margin: 0px 100px;
+}
+
+main section.must-have .products {
+    display: flex;
+    justify-content: space-between;
+}
+
+main section.must-have .products .product {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+main section.must-have .products .product .image {
+    position: relative;
+}
+
+main section.must-have .products .product .image .new-arrived {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    font-size: 13px;
+    font-family: var(--font-family-Rokkitt);
+    padding: 5px;
+    background-color: var(--success-color);
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+
+main section.must-have .products .product img {
+    position: relative;
+    width: 420px;
+    height: 350px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+main section.must-have .products .product .details {
+    background-color: var(--primary-color);
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+main section.must-have .products .product .details .info {
+    margin: 15px;
+}
+
+main section.must-have .products .product .details .info .title {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+
+main section.must-have .products .product .details .info .content {
+    color: var(--grey-super-light);
+    font-family: var(--font-family-Rokkitt);
+    font-weight: 400;
+    font-size: 14px;
+}
+
+main section.must-have .products .product .details a {
+    transition: 0.2s;
+    height: 48px;
+    width: 135px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    right: 20px;
+    top: 19px;
+}
+
+main section.must-have .products .product .details a:hover {
+    transition: 0.2s;
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+main section.top {
+    margin: 0 100px;
+}
+
+main section.top .products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main section.top .products .product {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px var(--grey-super-light);
+    overflow: hidden;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+main section.top .products .product a {
+    text-decoration: none;
+    color: unset;
+}
+
+main section.top .products .product img {
+    width: 300px;
+    max-height: 330px;
+    object-fit: cover;
+}
+
+main section.top .products .product .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 120px;
+    margin: 22px;
+    position: relative;
+}
+
+
+main section.top .products .product .info .subtitle {
+    font-size: 14px;
+    font-family: var(--font-family-Rokkitt);
+    color: var(--grey-light);
+    width: 215px;
+}
+
+main section.top .products .product .info .rate {
+    display: flex;
+}
+
+main section.top .products .product .info .rate .count {
+    margin-left: 7px;
+}
+
+main section.top .products .product .info .favorite {
+    position: absolute;
+    right: 0px;
+    top: 15px;
+}
+
+main section.top .products .product .info .favorite i {
+    font-size: 23px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+main section.top .products .product .info .rate .bi-star-fill {
+    color: #FFC000;
+}
+
+main section.top .products .product .info .price .new-price {
+    color: var(--alert-color);
+}
+
+main section.top .products .product .info .price .old-price {
+    color: var(--grey-light);
+    text-decoration: line-through;
+}
+
+main section.top .products .product .info .price .discount {
+    color: var(--alert-color);
+}
+
+main section.categories-sales {
+    margin: 0 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main section.categories-sales .category-sale {
+    display: flex;
+}
+
+main section.categories-sales .category-sale img {
+    width: 310px;
+    height: 393px;
+    object-fit: cover;
+}
+
+main section.categories-sales .category-sale .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 340px;
+}
+
+main section.categories-sales .category-sale:nth-child(1) .content {
+    background-color: #AA3A27;
+}
+
+main section.categories-sales .category-sale:nth-child(2) .content {
+    background-color: #1D5159;
+}
+
+main section.categories-sales:nth-child(2) .category-sale:nth-child(1) .content {
+    background-color: #E34E80;
+}
+
+main section.categories-sales:nth-child(2) .category-sale:nth-child(2) .content {
+    background-color: #0186C4;
+}
+
+main section.categories-sales .category-sale .content .title {
+    font-size: 35px;
+    word-wrap: break-word;
+    width: 90%;
+    margin-left: 20px;
+    color: #fff;
+    font-weight: 700;
+}
+
+main section.categories-sales .category-sale .content .subtitle {
+    font-size: 28px;
+    margin-left: 20px;
+    color: #fff;
+    margin-top: -30px;
+    font-weight: 300;
+}
+
+main section.categories-sales .category-sale .content a {
+    color: #fff;
+    margin-top: -30px;
+    margin-left: 20px;
+}
+
+footer {
+    position: relative;
+    margin-top: 150px;
+}
+
+footer .store-mail {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 570px;
+    height: 190px;
+    background-color: var(--accent-light-color);
+    border-radius: 10px;
+    padding-bottom: 15px;
+}
+
+footer .store-mail .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+footer .store-mail .container h1 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+footer .store-mail .container .content {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 14px;
+}
+
+footer .store-mail .container .mail {
+    position: relative;
+}
+
+footer .store-mail .container .mail input {
+    height: 40px;
+    width: 280px;
+    outline: none;
+    border: none;
+    text-indent: 10px;
+    border-radius: 10px;
+}
+
+footer .store-mail .container i {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    -webkit-text-stroke: 1px;
+    color: #7a7a7a;
+}
+
+footer .main .links {
+    height: 360px;
+    background-color: var(--primary-color);
+}
+
+footer .links {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .links .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+footer .links .column a {
+    color: var(--second-color);
+    text-decoration: none;
+    font-family: var(--font-family-Rokkitt);
+
+}
+
+footer .links .column a:nth-child(1) {
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+
+@media only screen and ((min-width:1001px) and (max-width:1400px)) {
+    main section.categories-sales {
+        margin: 0 20px;
+        justify-content: space-evenly;
+    }
+
+    main section.flash-sales .sales .sale {
+        width: 45%;
+        margin: 6px;
+    }
+
+    main section.must-have {
+        margin: 0px 80px;
+    }
+
+    main section.must-have .products .product img {
+        width: 380px;
+    }
+
+    main section.must-have .products .product .details .info .title {
+        font-size: 14px;
+    }
+
+    main section.categories-sales .category-sale img {
+        width: 225px;
+        height: 312px;
+    }
+
+    main section.categories-sales .category-sale .content {
+        width: 250px;
+    }
+
+    main section.categories-sales .category-sale .content .title {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    main section.categories-sales .category-sale .content .subtitle {
+        font-size: 16px;
+    }
+
+    main section.must-have .products .product {
+        width: 30%;
+    }
+
+    main section.must-have .products .product img {
+        width: 100%;
+    }
+
+    main section.must-have .products .product .details {
+        width: 100%;
+    }
+
+    main section.must-have .products .product .details a {
+        font-size: 13px;
+    }
+
+    main section.flash-sales {
+        margin: 0 50px;
+    }
+
+    main section.flash-sales .sales .sale img {
+        height: 200px;
+    }
+
+    main section.top .products .product {
+        width: 24%;
+    }
+
+    main section.top .products .product .info .subtitle {
+        width: 170px;
+    }
+}
+
+@media only screen and ((min-width:800px) and (max-width:1000px)) {
+    header {
+        margin-top: 129px;
+    }
+
+    main .slider {
+        height: 310px;
+    }
+
+    main .slider img {
+        height: 371px;
+    }
+
+    main .slider .ad .title {
+        font-size: 48px;
+    }
+
+    main .slider .ad .subtitle {
+        font-size: 28px;
+    }
+
+    main section.season-sales img {
+        max-width: 322px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    main section.flash-sales {
+        margin: 0 80px;
+        padding-top: 400px;
+    }
+
+    main section.flash-sales .sales .sale {
+        margin: 20px 0px;
+        width: 48%;
+    }
+
+    main section.season-sales .ad-poster {
+        width: 192px;
+        height: 120px;
+    }
+
+    main section.season-sales .ad-details .container .details {
+        margin: 15px;
+        margin-left: 100px;
+    }
+
+    main section.season-sales .ad-poster .container .ad-title {
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    main section.season-sales .ad-poster {
+        left: -97px;
+    }
+
+    main section.season-sales .ad-details .container .title {
+        font-size: 28px;
+    }
+
+    main section.categories-sales .category-sale .content,
+    main section.categories-sales .category-sale img {
+        width: 190px;
+    }
+
+    main section.categories-sales {
+        margin: 0 20px;
+    }
+
+    main section.must-have {
+        margin: 0 80px;
+    }
+
+    main section.must-have .products {
+        flex-wrap: wrap;
+    }
+
+    main section.must-have .products .product {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    main section.must-have .products .product img {
+        width: 100%;
+
+    }
+
+    main section.top .products .product img {
+        height: 400px;
+        max-height: unset;
+        object-fit: cover;
+    }
+
+    main section.top .products .product .info .title {
+        font-size: 14px;
+        font-weight: 900;
+    }
+
+    main section.top .products .product .info .subtitle {
+        width: 200px;
+        font-size: 13px;
+    }
+
+    main section.top .products .product {
+        margin: 10px 0;
+    }
+
+    main section.top {
+        margin: 0 80px;
+    }
+
+    main section.categories-sales .category-sale .content .title {
+        font-size: 22px;
+    }
+
+    main section.categories-sales .category-sale .content .subtitle {
+        font-size: 15px;
+    }
+
+    main section.categories-sales .category-sale .content a {
+        font-size: 15px;
+    }
+}
+
+@media only screen and ((min-width:750px) and (max-width:799px)) {
+    header {
+        margin-top: 130px;
+    }
+
+    main .slider {
+        height: 265px;
+    }
+
+    main .slider img {
+        height: 325px;
+    }
+
+    main .slider .ad .title {
+        font-size: 30px;
+    }
+
+    main .slider .ad .subtitle {
+        font-size: 22px;
+    }
+
+    main .slider .ad a {
+        padding: 10px 16px;
+    }
+
+    main section.categories-sales .category-sale img {
+        width: 60%;
+        height: 385px;
+    }
+
+    main section.categories-sales .category-sale .content {
+        width: 140px;
+    }
+
+    main section.categories-sales .category-sale .content .title {
+        font-size: 20px;
+    }
+
+    main section.categories-sales .category-sale .content .subtitle {
+        font-size: 16px;
+    }
+
+    main section.categories-sales {
+        margin: 0 10px;
+    }
+
+    main section.season-sales img {
+        max-width: 50%;
+        object-fit: cover;
+    }
+
+    main section.flash-sales {
+        margin: 0 50px;
+        padding-top: 400px;
+    }
+
+    main section.flash-sales .sales .sale {
+        width: 45%;
+        margin: 10px;
+    }
+
+    main section.season-sales .ad-poster {
+        display: none;
+    }
+
+    main section.season-sales .ad-details .container {
+        padding: 15px 0;
+    }
+
+    main section.season-sales .ad-details .container .title {
+        padding: 30px 20px 0px 20px;
+        font-size: 25px;
+    }
+
+    main section.season-sales .ad-details .container .details {
+        margin: 20px;
+        font-size: 18px;
+    }
+
+    main section.season-sales .ad-details .container a.ad-btn {
+        padding: 10px 16px;
+    }
+
+    main section.must-have .products .product {
+        width: 100%;
+        margin: 10px 0px;
+        overflow: hidden;
+    }
+
+    main section.must-have {
+        margin: 0 50px;
+    }
+
+    main section.must-have .products {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    main section.must-have .products .product img {
+        width: 100%;
+    }
+
+    main section.top .products .product {
+        width: 47%;
+        margin: 15px 0px;
+    }
+
+    main section.top {
+        margin: 0 50px;
+    }
+
+    main section.top .products .product img {
+        width: 100%;
+    }
+}
+
+@media only screen and ((min-width:600px) and (max-width:749px)) {
+    header {
+        margin-top: 130px;
+    }
+
+    main .slider {
+        height: 205px;
+    }
+
+    main .slider img {
+        height: 265px;
+    }
+
+    main .slider .ad .title {
+        font-size: 25px
+    }
+
+    main .slider .ad .subtitle {
+        width: 120px;
+        font-size: 16px;
+    }
+
+    main .slider .ad a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    main section.categories-sales .category-sale img {
+        width: 60%;
+        height: 385px;
+    }
+
+    main section.categories-sales .category-sale .content {
+        width: 140px;
+    }
+
+    main section.categories-sales .category-sale .content .title {
+        font-size: 20px;
+    }
+
+    main section.categories-sales .category-sale .content .subtitle {
+        font-size: 16px;
+    }
+
+    main section.categories-sales {
+        margin: 0 10px;
+    }
+
+    main section.season-sales img {
+        max-width: 50%;
+        object-fit: cover;
+    }
+
+    main section.flash-sales {
+        margin: 0 50px;
+        padding-top: 300px;
+    }
+
+    main section.flash-sales .sales {
+        display: flex;
+        /* Ensure products are in a row */
+        overflow-x: scroll;
+        /* Enable horizontal scrolling */
+        scroll-behavior: smooth;
+        /* Add smooth scrolling effect (optional) */
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    main section.flash-sales .sales .sale {
+        width: 45%;
+        margin: 10px;
+    }
+
+    main section.flash-sales .sales .sale a {
+        width: 280px;
+    }
+
+    main section.top .products .product img {
+        height: 330px;
+    }
+
+    main section.season-sales .ad-poster {
+        display: none;
+    }
+
+    main section.season-sales .ad-details .container {
+        padding: 15px 0;
+    }
+
+    main section.season-sales .ad-details .container .title {
+        padding: 30px 20px 0px 20px;
+        font-size: 25px;
+    }
+
+    main section.season-sales .ad-details .container .details {
+        margin: 20px;
+        font-size: 18px;
+    }
+
+    main section.season-sales .ad-details .container a.ad-btn {
+        padding: 10px 16px;
+    }
+
+    main section.must-have .products .product {
+        width: 100%;
+        margin: 10px 0px;
+        overflow: hidden;
+    }
+
+    main section.must-have {
+        margin: 0 50px;
+    }
+
+    main section.must-have .products {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    main section.must-have .products .product img {
+        width: 100%;
+    }
+
+    main section.top .products .product {
+        width: 47%;
+        margin: 15px 0px;
+    }
+
+    main section.top {
+        margin: 0 50px;
+    }
+
+    main section.top .products .product img {
+        width: 100%;
+    }
+
+    main section.flash-sales .sales {
+        overflow: scroll;
+        flex-wrap: nowrap;
+    }
+
+    main section.flash-sales .sales .sale {
+        width: 100%;
+    }
+
+    main section.flash-sales .sales .sale img {
+        width: 100%;
+    }
+
+    main section.flash-sales .sales .sale .details {
+        width: 85%;
+    }
+}
+
+@media only screen and ((min-width:400px) and (max-width:599px)) {
+
+    header {
+        margin-top: 130px;
+    }
+
+    main .slider {
+        height: 205px;
+    }
+
+    main .slider img {
+        height: 265px;
+    }
+
+    main .slider .ad .title {
+        font-size: 25px
+    }
+
+    main .slider .ad .subtitle {
+        width: 120px;
+        font-size: 16px;
+    }
+
+    main .slider .ad a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    main section.categories-sales .category-sale {
+        margin: 10px 0;
+    }
+
+    main section.categories-sales .category-sale img {
+        width: 60%;
+        height: 385px;
+    }
+
+    main section.categories-sales .category-sale .content {
+        width: 50%;
+    }
+
+    main section.categories-sales .category-sale .content .title {
+        font-size: 20px;
+    }
+
+    main section.categories-sales .category-sale .content .subtitle {
+        font-size: 16px;
+    }
+
+    main section.categories-sales {
+        margin: 0 10px;
+    }
+
+    main section.season-sales img {
+        max-width: 50%;
+        object-fit: cover;
+    }
+
+    main section.flash-sales {
+        margin: 0 50px;
+        padding-top: 300px;
+    }
+
+    main section.flash-sales .sales {
+        display: flex;
+        /* Ensure products are in a row */
+        overflow-x: scroll;
+        /* Enable horizontal scrolling */
+        scroll-behavior: smooth;
+        /* Add smooth scrolling effect (optional) */
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    main section.flash-sales .sales .sale {
+        width: 45%;
+        margin: 10px;
+    }
+
+    main section.flash-sales .sales .sale a {
+        width: 280px;
+    }
+
+    main section.top .products .product img {
+        height: 250px;
+    }
+
+    main section.top .products .product .info .subtitle {
+        font-size: 13px;
+        width: 100px;
+    }
+
+    main section.top .products .product .info .favorite i {
+        font-size: 21px;
+    }
+
+    main section.season-sales .ad-poster {
+        display: none;
+    }
+
+    main section.season-sales .ad-details .container {
+        padding: 15px 0;
+    }
+
+    main section.season-sales .ad-details .container .title {
+        padding: 30px 20px 0px 20px;
+        font-size: 25px;
+    }
+
+    main section.season-sales .ad-details .container .details {
+        margin: 20px;
+        font-size: 18px;
+    }
+
+    main section.season-sales .ad-details .container a.ad-btn {
+        padding: 10px 16px;
+    }
+
+    main section.must-have .products .product {
+        width: 100%;
+        margin: 10px 0px;
+        overflow: hidden;
+    }
+
+    main section.must-have {
+        margin: 0 50px;
+    }
+
+    main section.must-have .products {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    main section.must-have .products .product img {
+        width: 100%;
+    }
+
+    main section.top .products .product {
+        width: 48%;
+        margin: 15px 0px;
+    }
+
+    main section.top .products .product .info .rate .stars {
+        display: flex;
+    }
+
+    main section.top {
+        margin: 0 50px;
+    }
+
+    main section.top .products .product img {
+        width: 100%;
+    }
+
+    main section.flash-sales .sales {
+        overflow: scroll;
+        flex-wrap: nowrap;
+    }
+
+    main section.flash-sales .sales .sale {
+        width: 100%;
+    }
+
+    main section.flash-sales .sales .sale img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    main section.flash-sales .sales .sale .details {
+        width: 85%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .nav-mob {
+        display: block;
+    }
+
+    .nav-mob .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        display: none;
+    }
+
+    footer .store-mail {
+        width: 70%;
+    }
+
+    main section.categories-sales {
+        flex-wrap: wrap;
+    }
+
+    main .slider img {
+        height: 180px;
+    }
+
+    main .slider {
+        height: 141px;
+    }
+
+    main .slider img {
+        top: -39px;
+    }
+
+    main .slider .ad {
+        left: 58%;
+        top: 24px;
+    }
+
+    main .slider .ad .title {
+        font-size: 20px;
+    }
+
+    main .slider .ad .subtitle {
+        font-size: 13px;
+        margin-left: 3px;
+    }
+
+    main .slider .ad a {
+        top: 15px;
+        font-size: 13px;
+        margin-left: 3px;
+    }
+
+    .bar h2 {
+        font-size: 18px;
+        letter-spacing: -0.5px;
+    }
+
+    .bar a {
+        font-size: 18px;
+        letter-spacing: -0.5px;
+    }
+
+    main section.flash-sales {
+        padding-top: 250px;
+    }
+
+    main section {
+        margin: 0 25px !important;
+    }
+
+    main section.flash-sales .sales .sale a {
+        width: 200px;
+        height: 380px;
+    }
+
+    main section.flash-sales .sales {
+        margin-bottom: 30px;
+    }
+
+    main section.flash-sales .sales::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    main section.flash-sales .sales {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+    }
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+    main section.flash-sales .sales .sale .details .price span {
+        font-size: 13px;
+    }
+
+    main section.flash-sales .sales .sale .details .rating span {
+        font-size: 13px;
+    }
+
+    main section.season-sales {
+        margin: 0 !important;
+    }
+
+    main section.season-sales .ad-details .container .title {
+        font-size: 20px;
+    }
+
+    main section.season-sales .ad-details .container .details {
+        font-size: 16px;
+    }
+
+    main section.season-sales .ad-details .container a.ad-btn i {
+        font-size: 16px;
+    }
+
+    main section.season-sales {
+        margin-bottom: 30px !important;
+    }
+
+    main section .bar {
+        margin-bottom: 0;
+    }
+
+    main section.must-have .products .product .details .info .title {
+        margin-bottom: 3px;
+    }
+
+    footer .store-mail .container .mail input {
+        width: 175px;
+    }
+
+    footer .store-mail .container h1 {
+        margin: 2px 0px;
+    }
+
+    footer .links {
+        flex-wrap: wrap;
+        padding: 0px 20px;
+        padding-top: 110px;
+    }
+
+    footer .links .column {
+        margin-top: 0;
+        margin-bottom: 20px;
+        flex: 49%;
+    }
+
+    @keyframes pop-slide {
+        0% {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            opacity: 0.5;
+            transform: translateY(30vh) rotate(360deg);
+        }
+
+        40% {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            opacity: 1;
+            transform: translateY(-1vh) rotate(0);
+        }
+
+        70% {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            opacity: 1;
+            transform: translateY(5vh) rotate(0);
+        }
+
+        100% {
+            border-radius: 20px;
+            opacity: 1;
+            transform: translateY(0vh);
+        }
+    }
+}
+
+@media only screen and ((min-width:0px) and (max-width:399px)) {
+    header {
+        margin-top: 130px;
+    }
+
+    main .slider {
+        height: 205px;
+    }
+
+    main .slider img {
+        height: 265px;
+    }
+
+    main .slider .ad .title {
+        font-size: 25px
+    }
+
+    main .slider .ad .subtitle {
+        width: 120px;
+        font-size: 16px;
+    }
+
+    main .slider .ad a {
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+
+    main section.categories-sales .category-sale {
+        margin: 10px 0;
+    }
+
+    main section.categories-sales .category-sale img {
+        width: 60%;
+        height: 385px;
+    }
+
+    main section.categories-sales .category-sale .content {
+        width: 50%;
+    }
+
+    main section.categories-sales .category-sale .content .title {
+        font-size: 20px;
+    }
+
+    main section.categories-sales .category-sale .content .subtitle {
+        font-size: 16px;
+    }
+
+    main section.categories-sales {
+        margin: 0 10px;
+    }
+
+    main section.season-sales img {
+        max-width: 50%;
+        object-fit: cover;
+    }
+
+    main section.flash-sales {
+        margin: 0 50px;
+        padding-top: 300px;
+    }
+
+    main section.flash-sales .sales {
+        display: flex;
+        /* Ensure products are in a row */
+        overflow-x: scroll;
+        /* Enable horizontal scrolling */
+        scroll-behavior: smooth;
+        /* Add smooth scrolling effect (optional) */
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    main section.flash-sales .sales .sale {
+        width: 45%;
+        margin: 10px;
+    }
+
+    main section.flash-sales .sales .sale a {
+        width: 280px;
+    }
+
+    main section.top .products .product img {
+        height: 250px;
+    }
+
+    main section.top .products .product .info .subtitle {
+        font-size: 13px;
+        width: 100px;
+    }
+
+    main section.top .products .product .info .favorite i {
+        font-size: 21px;
+    }
+
+    main section.season-sales .ad-poster {
+        display: none;
+    }
+
+    main section.season-sales .ad-details .container {
+        padding: 15px 0;
+    }
+
+    main section.season-sales .ad-details .container .title {
+        padding: 30px 20px 0px 20px;
+        font-size: 25px;
+    }
+
+    main section.season-sales .ad-details .container .details {
+        margin: 20px;
+        font-size: 18px;
+    }
+
+    main section.season-sales .ad-details .container a.ad-btn {
+        padding: 10px 16px;
+    }
+
+    main section.must-have .products .product {
+        width: 100%;
+        margin: 10px 0px;
+        overflow: hidden;
+    }
+
+    main section.must-have {
+        margin: 0 50px;
+    }
+
+    main section.must-have .products {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    main section.must-have .products .product img {
+        width: 100%;
+    }
+
+    main section.top .products .product {
+        width: 100%;
+        margin: 15px 0px;
+    }
+
+    main section.top .products .product .info .rate .stars {
+        display: flex;
+    }
+
+    main section.top {
+        margin: 0 50px;
+    }
+
+    main section.top .products .product img {
+        width: 100%;
+    }
+
+    main section.flash-sales .sales {
+        overflow: scroll;
+        flex-wrap: nowrap;
+    }
+
+    main section.flash-sales .sales .sale {
+        width: 100%;
+    }
+
+    main section.flash-sales .sales .sale img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    main section.flash-sales .sales .sale .details {
+        width: 85%;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .nav-mob {
+        display: block;
+    }
+
+    .nav-mob .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        display: none;
+    }
+
+    footer .store-mail {
+        width: 70%;
+    }
+
+    main section.categories-sales {
+        flex-wrap: wrap;
+    }
+
+    main .slider img {
+        height: 154px;
+    }
+
+    main .slider {
+        height: 141px;
+        width: 300px;
+    }
+
+    main .slider img {
+        top: -13px;
+    }
+
+    main .slider .ad {
+        left: 58%;
+        top: 24px;
+    }
+
+    main .slider .ad .title {
+        font-size: 20px;
+    }
+
+    main .slider .ad .subtitle {
+        font-size: 13px;
+        margin-left: 3px;
+    }
+
+    main .slider .ad a {
+        top: 15px;
+        font-size: 13px;
+        margin-left: 3px;
+    }
+
+    .bar h2 {
+        font-size: 18px;
+        letter-spacing: -0.5px;
+    }
+
+    .bar a {
+        font-size: 18px;
+        letter-spacing: -0.5px;
+    }
+
+    main section.flash-sales {
+        padding-top: 200px;
+    }
+
+    main section {
+        margin: 0 25px !important;
+    }
+
+    main section.flash-sales .sales .sale a {
+        width: 200px;
+        height: auto;
+    }
+
+    main section.must-have .products .product .details a {
+        height: 41px;
+        width: 172px;
+        top: 25px;
+        font-size: 13px;
+    }
+
+    main section.must-have .products .product .details .info .title {
+        font-size: 14px;
+    }
+
+    main section.flash-sales .sales {
+        margin-bottom: 30px;
+    }
+
+    main section.flash-sales .sales::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    main section.flash-sales .sales {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+    }
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+    main section.flash-sales .sales .sale .details .price span {
+        font-size: 13px;
+    }
+
+    main section.flash-sales .sales .sale .details .rating span {
+        font-size: 13px;
+    }
+
+    main section.season-sales {
+        margin: 0 !important;
+    }
+
+    main section.season-sales .ad-details .container .title {
+        font-size: 20px;
+    }
+
+    main section.season-sales .ad-details .container .details {
+        font-size: 16px;
+    }
+
+    main section.season-sales .ad-details .container a.ad-btn i {
+        font-size: 16px;
+    }
+
+    main section.season-sales {
+        margin-bottom: 30px !important;
+    }
+
+    main section .bar {
+        margin-bottom: 0;
+    }
+
+    main section.must-have .products .product .details .info .title {
+        margin-bottom: 3px;
+    }
+
+    footer .store-mail .container .mail input {
+        width: 175px;
+    }
+
+    footer .store-mail .container h1 {
+        margin: 2px 0px;
+        font-size: 20px;
+    }
+
+    footer .store-mail .container .content {
+        width: 90%;
+    }
+
+    footer .links {
+        flex-wrap: wrap;
+        padding: 0px 20px;
+        padding-top: 110px;
+    }
+
+    footer .links .column {
+        margin-top: 0;
+        margin-bottom: 20px;
+        flex: 49%;
+    }
+
+    main section.flash-sales .sales .sale img {
+        max-height: 115px;
+    }
+
+    main section.flash-sales .sales .sale .datetime p {
+        margin: 0 !important;
+    }
+
+    main section.flash-sales .sales .sale .details {
+        margin: 0;
+    }
+}
+
+@media only screen and ((min-width:0px) and (max-width:599px)) {
+    .sidebar-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        z-index: 99999;
+        width: 70%;
+        height: 100vh;
+        background-color: #fff;
+        box-shadow: 0px 10px 10px rgb(70, 70, 70);
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+    }
+
+    .sidebar-menu.slidein {
+        animation-name: slidein-sidebar;
+    }
+
+    .sidebar-menu.slideout {
+        animation-name: slideout-sidebar;
+    }
+
+    .sidebar-menu.hide {
+        display: none;
+    }
+
+    .sidebar-menu .container {
+        height: 100%;
+    }
+
+    .sidebar-menu .container .menu-icon-close {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+    }
+
+    .sidebar-menu .login-icon {
+        position: absolute;
+        left: 25px;
+        top: 29px;
+    }
+
+    .sidebar-menu .login-icon i {
+        font-size: 24px;
+        color: var(--primary-color);
+        -webkit-text-stroke: 1px;
+    }
+
+    .sidebar-menu .container .menu-icon-close i {
+        font-size: 20px;
+        -webkit-text-stroke: 1px;
+        color: var(--primary-color);
+    }
+
+    .sidebar-menu .container .links {
+        margin-top: 80px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--grey-light);
+    }
+
+    .sidebar-menu .container .links a {
+        display: flex;
+        font-size: 20px;
+        text-decoration: none;
+        color: var(--primary-color);
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .sidebar-menu .container .links a i {
+        -webkit-text-stroke: 1px;
+        margin-right: 25px;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        background: black;
+        z-index: 9999;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        animation-duration: 0.3s;
+    }
+
+    .overlay.hide {
+        animation-name: fadeout-overlay;
+    }
+
+    .overlay.show {
+        display: block;
+        animation-name: fadein-overlay;
+    }
+
+    @keyframes slidein-sidebar {
+        from {
+            transform: translateX(-100%);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideout-sidebar {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes fadein-overlay {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 0.7;
+        }
+    }
+
+    @keyframes fadeout-overlay {
+        from {
+            opacity: 0.7;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+}
